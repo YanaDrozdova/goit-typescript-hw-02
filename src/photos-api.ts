@@ -13,7 +13,7 @@ export const fetchPhotos = async (
   query: string,
   currentPage: number
 ): Promise<FetchPhotosResponse> => {
-  const res = await axios.get("/search/photos", {
+  const res = await axios.get<FetchPhotosResponse>("/search/photos", {
     params: {
       query: query,
       page: currentPage,
